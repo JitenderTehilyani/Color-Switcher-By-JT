@@ -1,0 +1,32 @@
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 15px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  
+  .buttons span {  /* Added a style for child spans */
+    display: block;  /* Makes them behave like boxes */
+  }
+  
+  #orange {
+    background-color: #FF671F;
+  }
+  
+  #white {
+    background-color: #FFFFFF;
+  }
+  .ima {
+    height: 1rem;
+    width: 1rem;
+    margin: 0 auto;
+  }
+  
+  #green {
+    background-color: #046A38;
+  }
+  
