@@ -1,42 +1,318 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Background Color Switcher</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    
-    <!-- Navbar -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/503eba7de3.js" crossorigin="anonymous"></script>
 
-  <!-- main -->
-   <main>
-    <div>
+</head>
 
-    <h1 class="text-center mt-5 text" id="h1">My Country</h1>
+<body>
 
-    <span class="buttons" id="orange"></span>
-    <span class="buttons" id="white"> <img class="ima" src="ashoka-chakra-png-46973.png" alt="chakra"></span>
-    <span class="buttons" id="green"></span>
+    <!-- -------------------------------------------Header----------------------------- -->
+    <div id="header">
 
-    <h4 class="text-center text" id="h4">Try clicking on any of the above colors. to change the background color of this page.
-            
-    </h4>
+        <!-- navbar -->
+        <div class="navbar">
+            <nav>
+                <img src="logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#Services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <!-- Close -->
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <!-- open -->
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+
+            <!-- Header Text -->
+            <div class="header-text">
+                <h1>Hi, I'm <span>Jitender</span><br>Tehilyani from India,</h1>
+                <!-- Element to contain animated typing -->
+                <span id="element"></span>
+            </div>
+            <div>
+                <a href="CV.pdf" download class="btn">Download CV</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------About------------------------------ -->
+    <div id="About">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="about-col-1">
+                    <img src="output.png">
+                </div>
+
+                <div class="about-col-2">
+
+                    <h1 class="sub-title">About Me</h1>
+
+                    <p>I am a creative and ambitious
+                        individual with a passion for video
+                        editing and web development. As a
+                        student, I am eager to learn and
+                        apply my skills in these fields.
+                        Despite being a fresher, I bring
+                        enthusiasm, adaptability, and a
+                        strong work ethic to any project or
+                        task.</p>
+
+                    <!-- <div class="tab-titles">
+
+                        <p class="tab-links active-link">Skills</p>
+                        <p class="tab-links">Experience</p>
+                        <p class="tab-links">Education</p>
+
+                    </div> -->
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="showTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="showTab('experience')">Certificate</p>
+                        <p class="tab-links" onclick="showTab('education')">Education</p>
+                    </div>
+
+                    <!-- skills  -->
+                    <!-- <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                        <li><span>Web Developer</span><br>Web App Development</li>
+                        <li><span>Video Editor</span><br>Edit Stunning Videos</li>
+                        <li><span>Graphic Designer</span><br>Logo And Thumbnail Designer</li>
+                        <li><span>Digital Analyst</span><br>SMM, Google Ads, Fackbook Ads and etc</li>
+                    </ul>
+                    </div> -->
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Developer</span><br>Web App Development</li>
+                            <li><span>Video Editor</span><br>Edit Stunning Videos</li>
+                            <li><span>Graphic Designer</span><br>Logo And Thumbnail Designer</li>
+                            <li><span>Digital Analyst</span><br>SMM, Google Ads, Fackbook Ads and etc</li>
+                        </ul>
+                    </div>
+
+                    <!-- certificate  -->
+                    <!-- <div class="tab-contents" id="Experience">
+                        <h4>Projects</h4>
+                        <ul>
+                        <li><span>Tic Tac Toe Game</span><br>Web App Development</li>
+                        <li><span> Rock, Paper, And Scissors Game</span><br>Edit Stunning Videos</li>
+                        <li><span>Currency Converter</span><br>SMM, Google Ads, Fackbook Ads and etc</li>
+                        <li><span>Graphic Designer</span><br>Logo And Thumbnail Designer</li>
+                        <li><span>Video Editor</span><br>Logo And Thumbnail Designer</li>
+                    </ul>
+                    </div> -->
+
+                    <div class="tab-contents" id="experience">
+                        <!-- <h4>Projects</h4> -->
+                        <ul>
+                            <li><span>Digital Marketing</span><br><a
+                                    href="https://skillshop.exceedlms.com/student/award/de5gZSDCr3YKujCqvEjrjTC8"
+                                    target="_blank" class="btn3">Google Certificate</a></li>
+                            <li><span>Business Analysis</span><br><a href="https://simpli-web.app.link/e/kbET85OdqJb"
+                                    target="_blank" class="btn3">Simplilearn Certificate</a></li>
+                            <!-- <li><span>Tic Tac Toe Game</span><br>Web App Development</li>
+                            <li><span> Rock, Paper, And Scissors Game</span><br>Edit Stunning Videos</li>
+                            <li><span>Currency Converter</span><br>SMM, Google Ads, Fackbook Ads and etc</li>
+                            <li><span>Graphic Designer</span><br>Logo And Thumbnail Designer</li>
+                            <li><span>Video Editor</span><br>Logo And Thumbnail Designer</li> -->
+                        </ul>
+                    </div>
+
+                    <!-- Education  -->
+                    <!-- <div class="tab-contents" id="Education">
+                        <ul>
+                        <li><span>2023</span><br> Completed Senior Secondary Education with 71% at St. John's Diocesan Senior Secondary School</li>
+                        <li><span>Pursuing</span><br> Bachelor of Technology at Aryabhatta College of Engineering</li>
+                    </ul>
+                    </div> -->
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br> Completed Senior Secondary Education with 71% at St. John's
+                                Diocesan Senior Secondary School</li>
+                            <li><span>Pursuing</span><br> Bachelor of Technology at Aryabhatta College of Engineering
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 
+    <!-- ----------------------------------- Services--------------------------------------------------- -->
+    <div id="Services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Building awesome websites tailored just for you! Offering web development services to bring your
+                        online vision to life and drive your business forward.</p>
+                    <!-- <a href="#">learn More</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-video"></i>
+                    <h2>Video Editing</h2>
+                    <p>Make your videos stand out! We'll edit your footage to perfection, creating amazing content that
+                        grabs attention and keeps your viewers hooked.</p>
+                    <!-- <a href="#">learn More</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-tachograph-digital"></i>
+                    <h2>Digital Marketing</h2>
+                    <p>Boost your online presence with expert digital marketing services including Google Ads, Facebook
+                        Ads, and comprehensive social media management for targeted engagement and growth.</p>
+                    <!-- <a href="#">learn More</a> -->
+                </div>
+                <div>
+                    <i class="fa-solid fa-pen"></i>
+                    <h2>Graphic Designeing</h2>
+                    <p>Crafting captivating visuals just for you! Offering graphic design services to enhance your
+                        brand's image and make your content pop.</p>
+                    <!-- <a href="#">learn More</a> -->
+                </div>
+            </div>
 
-</div>
-   </main>
+        </div>
+    </div>
 
-   <!-- js -->
+    <!-- -------------------------------------------------- Projects--------------------------------- -->
+    <div id="projects">
+        <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="TicTacToe.png" alt="">
+                    <div class="layer">
+                        <h3>Tic Tak Toe Game</h3>
+                        <p>This project equipped me with the skills to manipulate
+                            HTML and CSS properties using JavaScript.</p>
+                        <a href="https://jitendertehilyani.github.io/TicTacToeGameByJT/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="checklist-6640235_1280.png" alt="">
+                    <div class="layer">
+                        <h3>ToDo List</h3>
+                        <p>Simple to-do list app built with React and Vite. Add, mark, and track your tasks easily!</p>
+                        <a href="https://jitendertehilyani.github.io/Todolist-by-JT/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                
+                <!-- color switcher -->
+                <div class="work">
+                    <img src="color.jpg" alt="" id="color">
+                    <div class="layer">
+                        <h3>Color Switcher</h3>
+                        <p>This code creates a webpage with a background color switcher. It features a title and a description, and three buttons representing different colors (orange, white, and green). Clicking a button changes the background color of the page and updates the text color and description to match the selected color, reflecting the meaning behind each color.</p>
+                        <a href="https://jitendertehilyani.github.io/Color-Switcher-By-JT/" target="_blank"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <!-- <div class="work">
+                    <img src="RockPaper.png" alt="">
+                    <div class="layer">
+                        <h3>Rock, Paper, And Scissors Game</h3>
+                        <p>This project taught me DOM manipulation while using event
+                            listeners.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="Currency.png" alt="">
+                    <div class="layer">
+                        <h3>Currency Converter</h3>
+                        <p>This project taught me how to use and integrate an API with
+                            web pages using JavaScript.</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div> -->
+                <div class="work">
+                    <img src="video.png" alt="">
+                    <div class="layer">
+                        <h3>Video Editing</h3>
+                        <p>Check out 'The Avishvasaneey Story'! I used my editing skills to create it using free clips
+                            from sites like Pixabay. Enjoy!</p>
+                        <a href="https://drive.google.com/file/d/1zLXEyH9_jyY6qX4E31PAGVBihvy-YEoq/view?usp=drive_link"
+                            target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="thubnail.png" alt="">
+                    <div class="layer">
+                        <h3>Graphic Design</h3>
+                        <p>Here's the thumbnail for 'The Avishvasaneey Story'! Created using my graphic design skills,
+                            it's eye-catching and perfect for grabbing attention.</p>
+                        <a href="https://www.canva.com/design/DAFnpfT-PJU/0lq0Pi-vC0AdlU35MXO7yw/edit?utm_content=DAFnpfT-PJU&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                            target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------Contact------------------------------ -->
+    <div id="contact">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> jitendertehilyani@gmail.com</p>
+                <!-- <p><i class="fa-solid fa-phone-volume"></i> +91 9057208828</p> -->
+
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/skillupwithjt/" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <!-- <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a> -->
+                    <a href="https://github.com/JitenderTehilyani" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+
+            <!-- <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Enter Your Name" required>
+                    <input type="email" name="Email" placeholder="Enter Your email" required>
+                    <textarea name="Message" rows="6" placeholder="Enter Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div> -->
+        </div>
+        <div class="copyright">
+            <p>Copyright © Jitender.</p>
+        </div>
+    </div>
+
+    <!-- TypeJs Animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['A Web Developer,', 'Digital Marketer,', 'Video Editor,', 'And Graphic Designer.'],
+            typeSpeed: 50,
+        });
+    </script>
+
+    <!-- js -->
     <script src="script.js"></script>
+</body>
 
-   <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    
-  </body>
 </html>
